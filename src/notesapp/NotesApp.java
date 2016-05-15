@@ -12,19 +12,38 @@ import notesapp.controller.Workspace;
 import notesapp.view.MainViewController;
 
 /**
+ * Main app for application
  *
  * @author Lama
  */
 public class NotesApp extends Application {
 
+    /**
+     * primary stage - main window
+     */
     private Stage primaryStage;
 
+    /**
+     * BorderPane with main window
+     */
     private BorderPane rootPane;
 
+    /**
+     * Dashboard - working space - goals etc.
+     */
     private AnchorPane dashboard;
 
+    /**
+     * workspace - where we save us files
+     */
     private Workspace workspace;
 
+    private static NotesApp app;
+
+
+    /**
+     * Init root layout
+     */
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -44,6 +63,9 @@ public class NotesApp extends Application {
         }
     }
 
+    /**
+     * add dashboard or workspace to window
+     */
     public void showDashboard() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -83,10 +105,21 @@ public class NotesApp extends Application {
 
     }
 
+
+    /**
+     * return workspace
+     *
+     * @return Workspace
+     */
     public Workspace getWorkspace() {
         return workspace;
     }
 
+    /**
+     * set workspace
+     *
+     * @param workspace
+     */
     public void setWorkspace(Workspace workspace) {
         this.workspace = workspace;
     }

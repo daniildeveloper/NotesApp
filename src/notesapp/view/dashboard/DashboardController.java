@@ -3,6 +3,8 @@ package notesapp.view.dashboard;
 /**
  * FXML Controller class
  *
+ * Controll all what in dashboard happen
+ *
  * @author Lama
  */
 public class DashboardController {
