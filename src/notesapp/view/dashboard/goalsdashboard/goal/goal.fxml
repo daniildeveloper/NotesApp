@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootSingleGoal" prefHeight="268.0" prefWidth="134.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notesapp.view.dashboard.goalsdashboard.goal.GoalController">
+    <stylesheets>
+        <URL value="@goal.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="day" layoutX="41.0" layoutY="4.0" text="Day" />
+      <VBox fx:id="goalsContainer" layoutX="17.0" layoutY="25.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="25.0" />
+   </children>
+</AnchorPane>

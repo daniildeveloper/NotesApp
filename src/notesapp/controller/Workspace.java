@@ -87,6 +87,17 @@ public class Workspace {
         this.path = pathname;
     }
 
+    private Workspace() {
+
+    }
+
+    public static Workspace getInstance() {
+        if (workspace == null) {
+            workspace = new Workspace();
+        }
+        return workspace;
+    }
+
     /**
      * create dirs in workspace
      *

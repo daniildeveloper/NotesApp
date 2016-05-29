@@ -38,9 +38,6 @@ public class NotesApp extends Application {
      */
     private Workspace workspace;
 
-    private static NotesApp app;
-
-
     /**
      * Init root layout
      */
@@ -49,7 +46,6 @@ public class NotesApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(NotesApp.class.getResource("view/MainView.fxml"));
             MainViewController controller = loader.getController();
-//            controller.setMainApp(this);
 
             rootPane = (BorderPane) loader.load();
 

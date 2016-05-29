@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="goalsDashboarRootStage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notesapp.view.dashboard.goalsdashboard.GoalsController">
+   <children>
+      <HBox fx:id="hBox" layoutY="62.0" prefHeight="316.0" prefWidth="562.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <MenuButton fx:id="menuButton" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" text="Weekly" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="14.0">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Weekly" />
+          <MenuItem mnemonicParsing="false" text="Monthly" />
+            <MenuItem mnemonicParsing="false" text="Yearly" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

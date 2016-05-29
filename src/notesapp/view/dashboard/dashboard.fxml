@@ -14,7 +14,10 @@
    <children>
       <TabPane layoutX="24.0" layoutY="21.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
-          <Tab text="Goals" />
+          <Tab fx:id="goals" onSelectionChanged="#showGoalsDashboard" text="Goals">
+               <content>
+                  <AnchorPane fx:id="goalsTabAnchorPane" prefHeight="200.0" prefWidth="200.0" />
+               </content></Tab>
           <Tab text="Planning" />
             <Tab text="NotePad">
               <content>
