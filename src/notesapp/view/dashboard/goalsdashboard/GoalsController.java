@@ -28,6 +28,7 @@ public class GoalsController {
 
     @FXML
     private AnchorPane singleGoal;
+
     /**
      * Initializes the controller class.
      */

@@ -3,5 +3,34 @@
  */
 
 .mainFxmlClass {
+    /*-fx-padding: 20px;*/
+    -fx-border-color: #CDD1EA;
+    -fx-border-style: solid;
+    -fx-border-radius: 1px;
+    -fx-background-color: #307CF2;
+
+
+}
+
+.vboxClass{
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-text-fill: #307CF2;
+
+}
+/*.vboxClass*/
+
+.labelDay{
+    -fx-text-fill: white;
+}
+.goal{
+    -fx-background-color: white;
+    -fx-text-fill: #307CF2;
+    -fx-border-radius: 0px;
+    -fx-padding: 2px 40px;
+
+}
+
+.ssss{
 
 }
