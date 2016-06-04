@@ -33,27 +33,24 @@ public class GoalsController {
      * Initializes the controller class.
      */
     public void initialize() {
-        initGoals();
-
+        for (int i = 0; i < 10; i++) {
+            initGoal();
+        }
 
     }
 
-    public void initGoals() {
+    public void initGoal() {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(GoalsController.class.getResource("goal/goal.fxml"));
 
 //            GoalController gc = loader.getController();
-
             singleGoal = (AnchorPane) loader.load();
-
 
             hBox.getChildren().add(singleGoal);
         } catch (IOException ex) {
             Logger.getLogger(GoalsController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
 
 }
