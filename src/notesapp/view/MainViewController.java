@@ -115,14 +115,10 @@ public class MainViewController {
         directoryChooser.setTitle("Choose directory");
         File f = directoryChooser.showDialog(new Stage());
         String fName = f.getAbsolutePath();
+        System.out.println(fName);
         Workspace workspace = Workspace.getInstance(fName);
         workspace.createWorkingDirectories();
         app.setWorkspace(workspace);
-
-        if (!conf.workspaceInDB()) {
-            sQLiteUtil.insert("insert into configuration (id, name, value) values (1, 'workspace', " + fName + ")");
-            System.out.println("seted");
-        }
     }
 
     /**

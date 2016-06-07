@@ -67,4 +67,20 @@ public class SQLiteUtil {
 
     }
 
+    public boolean workspaceInDB() {
+        String workspace = null;
+        ResultSet resultSet = select("select * from configuration");
+        try {
+            workspace = resultSet.getString("workspace");
+        } catch (SQLException ex) {
+            Logger.getLogger(SQLiteUtil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (workspace.isEmpty() || workspace == null) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
 }

@@ -27,7 +27,7 @@ public class Workspace {
     /**
      * string - absolute path to directory
      */
-    private String path;
+    public static String path;
 
     /**
      * .notesapp dir. Contains all data for registration, auth, integration,
@@ -74,17 +74,19 @@ public class Workspace {
      */
     private final String dashboard = "/dashboard";
 
-    public static Workspace getInstance(String path) {
-        f = new File(path);
+    public static Workspace getInstance(String pathName) {
+        path = pathName;
+
+        f = new File(pathName);
 
         if (workspace == null) {
-            workspace = new Workspace(path);
+            workspace = new Workspace(pathName);
         }
         return workspace;
     }
 
     private Workspace(String pathname) {
-        this.path = pathname;
+        Workspace.path = pathname;
     }
 
     private Workspace() {
@@ -114,6 +116,7 @@ public class Workspace {
             File diagramsFile = new File(this.path + diagrams);
             File dashboardFile = new File(this.path + dashboard);
 
+            System.out.println(notesappFile);
             notesappFile.mkdirs();
             notepadFile.mkdirs();
             goalsFile.mkdirs();
