@@ -39,6 +39,13 @@ public class NotesApp extends Application {
     private Workspace workspace;
 
     /**
+     * contains configuration
+     */
+    public Conf configuration = Conf.getInstance();
+
+    public static String db = "app.db";
+
+    /**
      * Init root layout
      */
     public void initRootLayout() {
@@ -75,6 +82,10 @@ public class NotesApp extends Application {
 
     }
 
+    /**
+     *
+     * @param primaryStage
+     */
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -83,6 +94,8 @@ public class NotesApp extends Application {
             MainViewController c = new MainViewController();
             c.exitApp();
         });
+        configuration.initDB();
+//        configuration.workspaceInDB();
 
         initRootLayout();
 
@@ -100,7 +113,6 @@ public class NotesApp extends Application {
     public NotesApp() {
 
     }
-
 
     /**
      * return workspace

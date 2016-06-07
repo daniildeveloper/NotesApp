@@ -10,8 +10,10 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import notesapp.Conf;
 import notesapp.NotesApp;
 import notesapp.controller.Workspace;
+import util.SQLiteUtil;
 
 /**
  * FXML Controller class Main View Controller. Includes main - top menu.
@@ -60,6 +62,10 @@ public class MainViewController {
      * main app class example
      */
     private final NotesApp app = new NotesApp();
+
+    private Conf conf = Conf.getInstance();
+
+    SQLiteUtil sQLiteUtil = new SQLiteUtil(NotesApp.db);
 
     /**
      * Initializes the controller class.
@@ -112,6 +118,11 @@ public class MainViewController {
         Workspace workspace = Workspace.getInstance(fName);
         workspace.createWorkingDirectories();
         app.setWorkspace(workspace);
+
+        if (!conf.workspaceInDB()) {
+            sQLiteUtil.insert("insert into configuration (id, name, value) values (1, 'workspace', " + fName + ")");
+            System.out.println("seted");
+        }
     }
 
     /**

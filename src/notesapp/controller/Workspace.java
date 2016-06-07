@@ -17,7 +17,7 @@ public class Workspace {
     /**
      * class workspace
      */
-    public static Workspace workspace;
+    private static Workspace workspace;
 
     /**
      * directory workspace
@@ -128,6 +128,14 @@ public class Workspace {
         } else {
             return false;
         }
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     /**
