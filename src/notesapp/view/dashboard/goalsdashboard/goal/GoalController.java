@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -62,10 +63,10 @@ public class GoalController {
     public void makeCheckBox() {
         if (!goals.isEmpty()) {
             for (String g1 : goals) {
-            CheckBox cb = new CheckBox(g1);
-            cb.setStyle("-fx-text-fill: #307CF2;-fx-padding: 3px;");
+                CheckBox cb = new CheckBox(g1);
+                cb.setStyle("-fx-text-fill: #307CF2;-fx-padding: 3px;");
 
-            goalsContainer.getChildren().add(cb);
+                goalsContainer.getChildren().add(cb);
             }
 
         }
@@ -120,8 +121,8 @@ public class GoalController {
                 makeCheckBox();
             }
         });
-        
-        if(!isOnDashboard){
+
+        if (!isOnDashboard) {
             goalsContainer.getChildren().add(textField);
             isOnDashboard = true;
         }

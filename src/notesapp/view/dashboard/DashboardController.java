@@ -31,7 +31,6 @@ public class DashboardController {
     @FXML
     private AnchorPane goalsTabDashboard;
 
-
     /**
      * Initializes the controller class.
      */
@@ -46,7 +45,6 @@ public class DashboardController {
         loader.setLocation(DashboardController.class.getResource("goalsdashboard/goals.fxml"));
         GoalsController controller = loader.getController();
 
-
         try {
             goalsTabDashboard = (AnchorPane) loader.load();
             goalsTabAnchorPane.getChildren().add(goalsTabDashboard);
@@ -55,7 +53,5 @@ public class DashboardController {
         }
 
     }
-
-
 
 }

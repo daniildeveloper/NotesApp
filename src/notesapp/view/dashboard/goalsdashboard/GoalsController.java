@@ -6,6 +6,8 @@ import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import notesapp.view.dashboard.goalsdashboard.goal.GoalController;
@@ -29,6 +31,9 @@ public class GoalsController {
     @FXML
     private AnchorPane singleGoal;
 
+    @FXML
+    private ScrollPane scrollPane;
+
     /**
      * Initializes the controller class.
      */
@@ -36,6 +41,8 @@ public class GoalsController {
         for (int i = 0; i < 10; i++) {
             initGoal();
         }
+
+        scrollPane.setTooltip(new Tooltip("Goals"));
 
     }
 
